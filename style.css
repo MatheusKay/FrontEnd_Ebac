@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+body > header{
+    background-color: rgb(41, 39, 39);
+    padding: 16px 0;
+    color: white;
+    position: fixed;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header li{
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 16px;
+}
+
+header li a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.artigo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.artigo article img{
+    /*height: 180px;*/
+    width: 100%;
+}
+
+.artigo article{
+    width: 30%;
+}
+
+section{
+    padding: 16px 0;
+}
+
+section h2,
+.artigo article{
+    margin-bottom: 16px 0;
+}
+
+.artigo article h3{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.artigo article a{
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.artigo article a:hover{
+    text-decoration: underline;
+}
+
+.artigo article p,
+.artigo article a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section h2{
+    font-size: 30px;
+}
+
+section h3{
+    font-size: 22px;
+}
+
+#sports{
+    background-color: green;
+}
+
+#sports article a{
+    background-color: rgb(47, 121, 47);
+}
+
+#economia{
+    background-color: gold;
+}
+
+#economia article a{
+    background-color: rgb(182, 157, 18);
+}
