@@ -4,15 +4,20 @@
     padding: 0;
 }
 
+body > section{
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
 body > header{
-    background-color: rgb(41, 39, 39);
-    padding: 16px 0;
+    background-color: brown;
+    padding: 16px;
     color: white;
     position: fixed;
     width: 100%;
 }
 
-header .container{
+header .po{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,9 +25,7 @@ header .container{
 
 header li{
     display: inline;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin-left: 16px;
+    margin-left: 8px;
 }
 
 header li a{
@@ -30,8 +33,12 @@ header li a{
     text-decoration: none;
 }
 
-.container{
-    width: 100%;
+header li a:hover{
+    text-decoration: underline;
+}
+
+.po{
+    width: 1000px;
     margin: 0 auto;
 }
 
@@ -56,7 +63,7 @@ section{
 
 section h2,
 .artigo article{
-    margin-bottom: 16px 0;
+    margin-bottom: 36px;
 }
 
 .artigo article h3{
@@ -65,8 +72,6 @@ section h2,
 }
 
 .artigo article a{
-    background-color: blue;
-    color: white;
     padding: 8px;
     display: inline-block;
     text-decoration: none;
@@ -78,31 +83,24 @@ section h2,
     text-decoration: underline;
 }
 
-.artigo article p,
-.artigo article a{
-    font-family: Arial, Helvetica, sans-serif;
+.artigo article h2{
+    font-size: 32px;
 }
 
-section h2{
-    font-size: 30px;
+.artigo article h3{
+    font-size: 20px;
 }
 
-section h3{
-    font-size: 22px;
+.artigo article p{
+    font-size: ;
 }
 
-#sports{
-    background-color: green;
-}
 
-#sports article a{
-    background-color: rgb(47, 121, 47);
-}
 
-#economia{
-    background-color: gold;
-}
 
-#economia article a{
-    background-color: rgb(182, 157, 18);
-}
+
+
+
+
+
+
