@@ -4,50 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista De Tarefas</title>
     <link rel="stylesheet" href="style.css">
-    <title>Jogo do maior</title>
 </head>
 <body>
-    <header>
-        <h1>Jogo do maior</h1>
-    </header>
-    <section>
-        <div class="dados">
-            <p>
-                O jogo é simples. Voce ira digitar dois numeros, onde esses dois numeros serão somados, se a soma desses numeros
-                forem maior que o numero gerado aleatoriamente voce ganha. Simples né. O numero deve ser entre 1 e 100.
-            </p>
-            <form id="form-deposito">    
-                <p>
-                    Digite aqui o primeiro numero <input type="number" id="primeiro-numero">
-                </p>
-                <p>
-                    Digite aqui o segundo numero <input type="number" id="segundo-numero">
-                </p>
-                <button type="submit" id="bnt-calcular">Calcular</button>
-            </form>    
-            <p class="calculando">
-                Calculando...
-            </p>
-        </div>
-        <div id="res">
-            <div class="mensagem-vitoria">    
-                <h2>Parabéns</h2>
-                <p id="mensagem">
-                    Seu numero foi: <b>56</b> e o numero gerado foi: <b>45</b>. Seu numero ganhou.
-                </p>
-            </div>
-            <div class="mensagem-derrota">    
-                <h2>Perdeu, tente novamente</h2>
-                <p id="mensagem-perdeu">
-                    Seu numero foi: <b>45</b> e o numero gerado foi: <b>56</b>. Seu numero perdeu.
-                </p>
-            </div>    
-        </div>
-    </section>
-    <footer>
-        <p>&copy;Creditos do Design - AtheusS</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="container"> 
+        <header>
+            <h1>Lista de Tarefas</h1>
+        </header>
+        <form>
+            <input type="text" id="tarefa-add" required placeholder="Tarefa a cumprir">
+            <button type="submit">Cadastra</button>
+        </form>
+        <ul>
+            
+        </ul>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <script src="script.js"></script>
+    </div>
 </body>
 </html>
