@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 960px;
+    margin: 0 auto;
+    font-family: 'Comme', sans-serif;
+}
+
+.container{
+    padding: 16px;
+    background-color: #ccc;
+    margin-top: 0;
+    height: 500px;
+    border-radius: 0 0 10px 10px;
+}
+
+header{
+    background-color: #2b2a2a;
+    padding: 16px;
+    margin-top: 36px;
+    border-radius: 10px 10px 0 0;
+}
+
+header h1{
+    color: #fff;
+}
+
+form .content { 
+    width:100%; 
+    margin-top: 36px;
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
+form .content .blc { 
+    float:left; 
+    width: 50%; 
+}
+
+label { 
+    display:block; 
+    font-size: 16px;
+}
+
+input { 
+    display:block; 
+    padding: 16px;
+    margin-bottom: 36px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 6px;
+}
+
+#nome-completo{
+    width: 390px;
+}
+
+#email{
+    width: 300px;
+}
+
+#endereço{
+    width: 350px;
+}
+
+#cep,
+#cpf{
+    width: 200px;
+}
+
+#bnt{
+    clear: left;
+    padding: 36px;
+    background-color: #3f3b3b;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#bnt button{
+    padding: 8px;
+    border: none;
+    border-radius: 6px; 
+    font-weight: bolder;
+    float: right;
+    margin-right: 6px;
+}
+
+#bnt .bnt-cor{
+    background-color: dodgerblue;
+    color: #fff;
+}
+
+#cartao {
+    display: inline-block;
+    position: relative;
+    margin-top: 50px;
+    display: none;
+}
+
+.texto {
+    position: absolute;
+    top: 225px;
+    left: 150px;
+    font-size: 16px;
+    color: white;
+    font-family: 'iceland', 'cursive';
+}
+
+.info{
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 32px;
+}
+
+.validade{
+    margin-left: 150px;
+    font-size: 14px;
+}
+
+.validade strong{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#nome{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.validador{
+    color: red;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 8px;
+    margin-top: -20px;
+}
