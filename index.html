@@ -4,23 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista De Tarefas</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comme&family=Iceland&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container"> 
-        <header>
-            <h1>Lista de Tarefas</h1>
-        </header>
+    <header>
+        <h1>Cadastro do seu novo cartão</h1>
+    </header>
+    <div class="container">
         <form>
-            <input type="text" id="tarefa-add" required placeholder="Tarefa a cumprir">
-            <button type="submit">Cadastra</button>
-        </form>
-        <ul>
+            <div class="content">
+                <div class="blc">
+                    <label>Nome Completo
+                        <input type="text" required name="nomeCompleto" id="nome-completo"/>
+                    </label>
+                </div>
+                <div class="blc">
+                    <label>E-mail
+                        <input type="email" required name="email" id="email"/>
+                    </label>
+                </div>
+                <div class="blc">
+                    <label>Telefone
+                        <input type="tel" required id="telefone" name="telefone"/>
+                    </label>
+                </div>
+                <div class="blc">
+                    <label for="cpf">CPF</label>
+                    <input type="text" required id="cpf" name="cpf"/>
+                </div>
+                <div class="blc">
+                    <label>Endereço completo
+                        <input type="text" required name="endereço" id="endereço"/>
+                    </label>
+                </div>
+                <div class="blc">
+                    <label>CEP
+                        <input type="text" required name="cep" id="cep"/>
+                    </label>
+                </div>
+            </div>
             
-        </ul>
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-        <script src="script.js"></script>
+            <div id="bnt">    
+                <button type="submit" class="bnt-cor">Criar</button>
+                <button type="button" class="previa">Ver previa</button>
+                <button type="reset">Cancela</button>
+            </div>
+        </form>
     </div>
+    <section id="cartao">
+        <img src="./imagens/signature.webp" alt="Imagem do prototipo do cartao">
+        <div class="texto">
+            <p class="info">1234 5678 9899 5487</p>
+            <div class="validade">
+                <p>VALID</p> 
+                <p>THRU <strong>06/24</strong></p>
+            </div>
+            <p id="nome"></p>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/messages_pt_BR.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
