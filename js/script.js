@@ -32,7 +32,7 @@ $(document).ready(function(){
             cpf: '<p class="validador">Por favor, Coloque o seu Cpf.</p>',
             endereço: '<p class="validador">Por favor, Coloque o seu Endereço.</p>'
         },
-        subimtHandler: function(form) {
+        submitHandle: function(form) {
             console.log(form)
         },
         invalidHandler: function(evento, validador) {
@@ -43,12 +43,12 @@ $(document).ready(function(){
         }
     })
 
-    $('.previa').click('button', function(){
+    $('.previa, button').click(function(){
         const nomeCartao = $('#nome-completo').val()
 
-        $('#nome').append(nomeCartao)
+        $('#nome').html(nomeCartao)
         
-        if(nomeCartao == ""){
+        if(nomeCartao === ""){
             alert('Por favor, preencha todos os campos antes de ver previa')
         }else{
             $('#cartao').css({display: "block"});
