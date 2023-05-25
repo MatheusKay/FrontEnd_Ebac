@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 1150px;
+    font-family: Roboto, sans-serif;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container,
+#sobre-loja .container{
+    display: flex;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    background-image: url(./imagens/todyQAj.jpg);
+    background-repeat: no-repeat; /*A imagem do Background-imagem nao ira se repetir*/
+    background-size: cover; /*A imagem irar cobrir todo o espaço que tera disponivel*/
+    padding: 16px 0;
+    width: 100%;
+    margin-bottom: 36px;
+    font-weight: bold;
+}
+
+header h1{
+    color: white;
+    font-weight: bold;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 16px;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav li a{
+    text-decoration: none;
+    color: white;
+}
+
+#sobre-loja img{
+    height: 400px;
+    margin-right: 36px;
+    margin-bottom: 100px;
+}
+
+#sobre-loja p{
+    font-size: 16px;
+}
+
+section h2{
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid red;
+    width: 100%;
+    color: red;
+}
+
+.produtos img{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+section p{
+    margin-top: 8px;
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.conteudo{
+    display: grid;
+    grid-template-columns: repeat(4, 24%);
+    column-gap: 1%;
+}
+
+section button{
+    padding: 8px;
+    margin-top: 8px;
+    background-image: url(./imagens/todyQAj.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .container{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+    header .container{
+        display: flex;
+        text-align: center;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    header h1{
+        font-size: 2.5em;
+    }
+
+    header .bnt-menu{
+        margin-top: 5px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    header .bnt-menu span{
+    background-color: white;
+    width: 26px;
+    height: calc(33px/7);
+    display: block;
+    border-radius: 35px;
+    margin-bottom: 3px;
+    }
+
+    #sobre-loja .container{
+        display: block;
+    }
+
+    #sobre-loja img{
+        margin-bottom: 36px;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #sobre-loja h2{
+        margin-bottom: 16px;
+    }
+
+    section h2{
+        margin-bottom: 36px;
+        padding-bottom: 16px;
+        border-bottom: 2px solid red;
+        width: 100%;
+        color: red;
+        font-size: 28px;
+    }
+
+    section p{
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    section button{
+        margin-bottom: 32px;
+        border-radius: 10px;
+    }
+
+    .conteudo{
+        display: block;
+        flex-direction: column;
+    }
+
+    .produtos h3{
+        font-size: 24px;
+    }
+}
