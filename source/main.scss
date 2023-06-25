@@ -1,0 +1,89 @@
+@use 'config/reset';
+@use 'config/style';
+@use 'seção-produtos/produtos';
+@use 'sass:math';
+
+@function pixelParaEm($valorEmPx, $pixelParaAtualizar: 16px){
+    @return math.div($valorEmPx, $pixelParaAtualizar)+em;
+}
+
+body{
+    background-color: style.$corFundo;
+    font-family: style.$fonteGeral;
+}
+
+.container{
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header{
+    background-color: style.$corHeader;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    li{
+        list-style: none;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 0;
+    }
+
+    .menu{
+        display: flex;
+
+        li{
+            font-weight: bold;
+            margin-left: 24px;
+
+            a{
+                color: style.$corBranco;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: style.$mobile){
+    header{
+        .branding{
+            img{
+                width: pixelParaEm(90px);
+            }
+        }
+    }
+    
+    .container{
+        .products{
+            display: block;
+
+            .product-item{
+                margin-bottom: pixelParaEm(32px);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: style.$tablet){
+    .container{
+        max-width: 80%;
+
+        .products{
+            grid-template-columns: repeat(2, 48.5%);
+        }
+    }
+}
+
+@media screen and (min-width: style.$nestHub) and (max-width: style.$nestHubLimite){
+    .container{
+        max-width: 950px;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
