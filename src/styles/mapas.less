@@ -1,0 +1,29 @@
+@import 'variaveis.less';
+
+#coresSite() {
+    fundo: @corDeFundo;
+    headerSite: @corDoHeader;
+    botao: @corDoBotao;
+    hoverBotao: @corDoHoverBtn;
+    branco: @corBranca;
+}
+
+//Confi do site
+
+.largura100{
+    width: 100%;
+}
+
+.dFlex{
+    display: flex;
+}
+
+.dBlock{
+    display: block;
+}
+
+.dimensoes(@padding: 8px 0, @bRadius: 8px, @mTop: 8px){
+    padding: @padding;
+    border-radius: @bRadius;
+    margin-top: @mTop;
+}
