@@ -8,7 +8,7 @@ header{
     text-align: center;
 }
 
-section{
+main{
     background: white;
     border-radius: 10px;
     padding: 15px;
@@ -17,21 +17,23 @@ section{
     box-sizing: 3px 3px 10px black ;
 }
 
+span{
+    font-weight: bold;
+}
 
-.mensagem-vitoria{
+.mensagem{
     padding: 6px;
-    background-color: chartreuse;
-    color: white;
+    color: #fff;
     border-radius: 10px;
     display: none;
 }
 
+.mensagem-vitoria{
+    background-color: chartreuse;
+}
+
 .mensagem-derrota{
-    padding: 6px;
     background-color: red;
-    color: white;
-    border-radius: 10px;
-    display: none;
 }
 
 footer{
