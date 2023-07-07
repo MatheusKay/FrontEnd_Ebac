@@ -13,17 +13,17 @@
   grid-template-columns: repeat(3, 33%);
   grid-column-gap: 1%;
 }
-.produtos .produto__imagem {
+.produtos__produto__imagem {
   width: 100%;
 }
-.produtos .produto__nome {
+.produtos__produto__nome {
   font-size: 1.2em;
   margin: 8px 0;
 }
-.produtos .produto__descricao {
+.produtos__produto__descricao {
   color: gray;
 }
-.produtos .produto--em-destaque {
+.produtos__produto--em-destaque {
   border: 2px solid gold;
   padding: 8px;
   background-color: #ffff42;
