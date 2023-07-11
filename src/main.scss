@@ -18,18 +18,18 @@ $corFundoDestaque: #ffff42;
 
     &__produto {
         &__imagem {
-            width: 100%;
+        width: 100%;
         }
-
+    
         &__nome {
             font-size: 1.2em;
             margin: 8px 0;
         }
-
+    
         &__descricao {
             color: gray;
         }
-
+    
         &--em-destaque {
             border: 2px solid $corBordaDestaque;
             padding: 8px;
