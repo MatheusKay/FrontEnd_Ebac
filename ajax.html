@@ -54,6 +54,9 @@
                 seguindosDoUsuario.innerText = json.following
                 linkDoGit.href = json.html_url
             })
+            .catch(function(erro) {
+                alert('Ocorreu um erro ao tentar capturar todas as informações do seu GitHub tente novamente mais tarde')
+            })
         })
     </script>
 </body>
