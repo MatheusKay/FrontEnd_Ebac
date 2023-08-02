@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Github</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img id="avatar" class="profile-avatar" src="https://via.placeholder.com/180x180" alt=".">
+            <h1 id="nome" class="profile-name"></h1>
+            <h2 id="nome-usuario" class="profile-username"></h2>
+            <ul class="numbers">
+                <li class="numbers-item">
+                    <h4>Repositórios</h4>
+                    <span id="repositorio"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguidores</h4>
+                    <span id="seguidores"></span>
+                </li>
+                <li class="numbers-item">
+                    <h4>Seguindo</h4>
+                    <span id="seguindo"></span>
+                </li>
+            </ul>
+            <a href="#" id="link" class="profile-link">Ver no Github</a>
+        </div>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const avatarDoUsuario = document.querySelector('#avatar')
+            const nomeDoUsuario = document.querySelector('#nome')
+            const arrobaDoUsuario = document.querySelector('#nome-usuario')
+            const repositorioDoUsuario = document.querySelector('#repositorio')
+            const seguidoresDoUsuario = document.querySelector('#seguidores')
+            const seguindosDoUsuario = document.querySelector('#seguindo')
+            const linkDoGit = document.querySelector('#link')
+
+            fetch('https://api.github.com/users/MatheusKay')
+            .then(function(res) {
+                return res.json();
+            })
+            .then(function(json) {
+                avatarDoUsuario.src = json.avatar_url
+                nomeDoUsuario.innerText = json.name
+                arrobaDoUsuario.innerText = json.login
+                repositorioDoUsuario.innerText = json.public_repos
+                seguidoresDoUsuario.innerText = json.followers
+                seguindosDoUsuario.innerText = json.following
+                linkDoGit.href = json.html_url
+            })
+            .catch(function(erro) {
+                alert('Ocorreu um erro ao tentar capturar todas as informações do seu GitHub tente novamente mais tarde')
+            })
+        })
+    </script>
+</body>
+</html>
