@@ -33,44 +33,44 @@ function adicionandoContato() {
 describe('Teste para o form de cadastro de contato', () => {
     beforeEach(() => {
         cy.visit('https://seus-contatos.vercel.app')
-    })
 
-    it('Deve clicar no botao e ir para a pagina de cadastro de contato', () => {
         cy.get('.sc-gxYJeL').click()
     })
 
     it('Deve voltar a lista de contatos', () => {
-        cy.get('.sc-gxYJeL').click()
-
         cy.get('.sc-dcrmVg > .sc-dicizt').click()
+
+        cy.get('.sc-ewnqHT').should('have.text', '0 contato marcado como: "Todos" ')
+        cy.get('.sc-gxYJeL').should('exist')
+        cy.get('.sc-fFGjHI').should('exist')
+        cy.get('.sc-kuWgmH').within(() => {
+            cy.get('.sc-kPTPQs').should('have.length', 27)
+        }) 
     })
 
     it('Deve preencher o campos de cadastro de contato', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
     })
 
     it('Deve testar o filtro por texto', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
 
         cy.get('.sc-fFGjHI').type('Math')
+
+        cy.get('.sc-cJPUEC > .sc-eywOmQ').should('have.value', 'Matheus Kayque')
     })
 
     it('Deve testar o filtro pelas iniciais', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
 
         cy.get('.sc-kuWgmH > :nth-child(7)').click() //Filtra por 'F'
+        cy.get('.sc-cJPUEC > .sc-eywOmQ').should('have.value', 'Fagner')
+
         cy.get('.sc-kuWgmH > :nth-child(14)').click() //Filtra por 'M'
+        cy.get('.sc-cJPUEC > .sc-eywOmQ').should('have.value', 'Matheus Kayque')
     })
 
     it('Deve testar o botao de editar contato', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
 
         cy.get(':nth-child(1) > .sc-jJTsDX > .sc-gUMnWI > :nth-child(1)').click() //Editando o primeiro contato
@@ -78,8 +78,6 @@ describe('Teste para o form de cadastro de contato', () => {
     })
 
     it('Deve testar o botao de editar contato', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
 
         cy.get(':nth-child(1) > .sc-jJTsDX > .sc-gUMnWI > :nth-child(1)').click() //Editando o primeiro contato
@@ -94,10 +92,8 @@ describe('Teste para o form de cadastro de contato', () => {
     })
 
     it('Deve remover o primeiro contato', () => {
-        cy.get('.sc-gxYJeL').click()
-        
         adicionandoContato()
 
-        cy.get(':nth-child(1) > .sc-jJTsDX > .sc-gUMnWI > .sc-hUOJWJ').click() //Salva as alterações do primeiro contato
+        cy.get(':nth-child(1) > .sc-jJTsDX > .sc-gUMnWI > .sc-hUOJWJ').click() //Removendo o primeiro contato
     })
 })
